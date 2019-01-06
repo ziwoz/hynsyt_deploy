@@ -16,7 +16,7 @@ def install_function():
     os.system('sudo systemctl start docker.service')
     os.system('sudo yum install -y epel-release')
     os.system('sudo yum install -y python-pip')
-    os.system('sudo pip install -y docker-compose')
+    os.system('sudo pip install docker-compose')
     os.system('sudo yum upgrade python*')
     try:
         os.mkdir('/docker')
