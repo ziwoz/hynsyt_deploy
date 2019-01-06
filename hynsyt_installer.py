@@ -22,8 +22,12 @@ def install_function():
         os.mkdir('/docker')
     except OSError:
         print('/docker folder already exists!')
+    try:
+        os.mkdir('/docker/BKP_SRV')
+    except OSError:
+        print('/BKP_SRV folder already exists!')
     os.system('sudo git pull https://github.com/ziwoz/BKP_SRV.git')
-    os.system('cd BKP_SRV')
+    # os.system('cd BKP_SRV')
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml build')
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml up')
 
