@@ -27,10 +27,11 @@ def install_function():
     except OSError:
         print('/BKP_SRV folder already exists!')
     try:
-        os.mkdir('/var/lib/pers')
+        os.mkdir('/var/lib/persis')
     except OSError:
         print('/DB folder already exists!')
-    os.system('sudo chmod -R 777 /var/lib/pers/')
+    os.system('sudo chmod -R 777 /var/lib/persis')
+    os.system('sudo chmod 777 -R /var/lib/persis')
     os.system('sudo git clone https://github.com/ziwoz/BKP_SRV.git /docker/BKP_SRV')
     # os.system('cd BKP_SRV')
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml build')
