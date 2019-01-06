@@ -30,7 +30,7 @@ def install_function():
         os.mkdir('/var/lib/persist')
     except OSError:
         print('/DB folder already exists!')
-    os.mkdir('sudo chmod -R 777 /var/lib/persist')
+    os.system('sudo chmod -R 777 /var/lib/persist')
     os.system('sudo git clone https://github.com/ziwoz/BKP_SRV.git /docker/BKP_SRV')
     # os.system('cd BKP_SRV')
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml build')
