@@ -27,8 +27,8 @@ def install_function():
     except OSError:
         print('/BKP_SRV folder already exists!')
     try:
-        os.mkdir('/var/lib/db')
-        os.mkdir('sudo chmod -R 777 /var/lib/db')
+        os.mkdir('/var/lib/persist')
+        os.mkdir('sudo chmod -R 777 /var/lib/persist')
     except OSError:
         print('/DB folder already exists!')
     os.system('sudo git clone https://github.com/ziwoz/BKP_SRV.git /docker/BKP_SRV')
