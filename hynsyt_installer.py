@@ -32,7 +32,7 @@ def install_function():
         print('/DB folder already exists!')
     os.system('sudo chmod -R 777 /var/lib/persis')
     os.system('sudo chmod 777 -R /var/lib/persis')
-    os.system('sudo git clone https://github.com/ziwoz/BKP_SRV.git /docker/BKP_SRV/cd7fd9d2112b0e4433189f8e764eec97321c6502')
+    os.system('sudo git clone https://github.com/ziwoz/BKP_SRV.git /docker/BKP_SRV/')
     # os.system('cd BKP_SRV')
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml build')
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml up')
