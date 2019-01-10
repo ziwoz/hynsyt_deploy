@@ -36,6 +36,9 @@ def install_function():
     # os.system('cd BKP_SRV')
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml build')
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml up')
+    # https://coderwall.com/p/xyuoza/git-cloning-specific-commits # add the clone to the specific version here
+    os.system('(cd / docker / BKP_SRV / & & sudo git checkout 5905b61953ab152f0de7bee4e81d26b26f15fcac)')
+
 
 
 install_function()
