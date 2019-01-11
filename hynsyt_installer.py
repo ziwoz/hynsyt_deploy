@@ -32,14 +32,14 @@ def install_function():
         print('/DB folder already exists!')
     os.system('sudo chmod -R 777 /var/lib/persis')
     os.system('sudo chmod 777 -R /var/lib/persis')
+    
+    # clone and install hynsyt from a specific commit ( tested production version )
     os.system('sudo git clone -n https://github.com/ziwoz/BKP_SRV.git /docker/BKP_SRV/')
-    os.system('(cd /docker/BKP_SRV && sudo git checkout 5905b61953ab152f0de7bee4e81d26b26f15fcac)')
-    # os.system('cd BKP_SRV')
+    os.system('(cd /docker/BKP_SRV && sudo git checkout cd7fd9d2112b0e4433189f8e764eec97321c6502)')
+
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml build')
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml up')
     # https://coderwall.com/p/xyuoza/git-cloning-specific-commits # add the clone to the specific version here
-
-
 
 
 install_function()
