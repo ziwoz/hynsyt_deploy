@@ -35,7 +35,8 @@ def install_function():
     
     # clone and install hynsyt from a specific commit ( tested production version )
     os.system('sudo git clone -n https://github.com/ziwoz/BKP_SRV.git /docker/BKP_SRV/')
-    os.system('(cd /docker/BKP_SRV && sudo git checkout cd7fd9d2112b0e4433189f8e764eec97321c6502)')
+    # os.system('(cd /docker/BKP_SRV && sudo git checkout cd7fd9d2112b0e4433189f8e764eec97321c6502)') #  Version A
+    os.system('(cd /docker/BKP_SRV && sudo git checkout c2285a8b7c6f2a1dc718c0d3182d7b80f216d1ed)')
 
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml build')
     os.system('sudo docker-compose -f /docker/BKP_SRV/docker-compose.yml up')
